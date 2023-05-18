@@ -1,1 +1,11 @@
-<p>first-component works!</p>
+<form [formGroup]="userForm" (ngSubmit)="onSave()">
+    <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <input type="text" matInput formControlName="name" placeholder="Name">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Age</mat-label>
+        <input type="text" matInput formControlName="age" placeholder="Age">
+      </mat-form-field>
+    <button type="submit" mat-raised-button color="primary">Save</button>
+</form>

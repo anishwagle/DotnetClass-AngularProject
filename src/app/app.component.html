@@ -1,13 +1,1 @@
-<div>
-
-  <input type="text" [(ngModel)]="title"/>
-  {{title}}
-
-  <div *ngIf="condition; else elseBlock">Content to render when condition is true.</div>
-  <div *ngFor="let item of listOfItem;first as e">
-    
-    <div *ngIf="e">this is a {{item}}item</div>
-  </div>
-  <ng-template #elseBlock> this is else block</ng-template>
-</div>
-<app-first-component></app-first-component>
+<router-outlet></router-outlet>

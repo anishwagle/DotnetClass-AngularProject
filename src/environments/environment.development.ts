@@ -1,3 +1,4 @@
 export const environment = {
-    useMock:false
+    useMock:false,
+    baseUrl:"https://localhost:7173"
 };

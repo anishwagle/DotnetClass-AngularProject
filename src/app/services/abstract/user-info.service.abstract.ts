@@ -1,5 +1,6 @@
-import { UserInfo } from "src/app/models/user-info.model";
+import { Observable } from "rxjs";
+import { Response } from "src/app/models/response.model";
 
 export abstract class IUserInfoService{
-    abstract getUserInfos():UserInfo[];
+    abstract  getUserInfos(): Observable<Response>;
 }

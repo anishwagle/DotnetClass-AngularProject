@@ -8,10 +8,13 @@ import { IUserInfoService } from '../services/abstract/user-info.service.abstrac
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit{
-userInfos:UserInfo[]=[];
+  displayedColumns: string[] = ['name', 'email', 'password', 'phone','actions'];
+  dataSource:UserInfo[] = [];
 constructor(private userInfoService:IUserInfoService){}
   ngOnInit(): void {
-    this.userInfos = this.userInfoService.getUserInfos();
+     this.userInfoService.getUserInfos().subscribe(response=>{
+      this.dataSource = response.result;
+     });
   }
 
 }

@@ -15,6 +15,8 @@ import { UserInfoService } from './services/user-info.service';
 import { IUserInfoService } from './services/abstract/user-info.service.abstract';
 import { environment } from 'src/environments/environment.development';
 import { MockUserService } from './services/mock/user-info.service.mock';
+import {MatTableModule} from '@angular/material/table'; 
+import {HttpClientModule} from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,9 @@ import { MockUserService } from './services/mock/user-info.service.mock';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule,
+    HttpClientModule
   ],
   providers: [{
     provide:IUserInfoService,

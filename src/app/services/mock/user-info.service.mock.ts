@@ -6,6 +6,18 @@ import { Observable } from "rxjs";
 
 @Injectable()
 export class MockUserService implements IUserInfoService{
+     getUserInfoById(id: string): Observable<Response> {
+        throw new Error("Method not implemented.");
+    }
+     deleteUserInfoBy(id: string): Observable<Response> {
+        throw new Error("Method not implemented.");
+    }
+     addUserInfo(name: string, email: string, password: string, phone: string): Observable<Response> {
+        throw new Error("Method not implemented.");
+    }
+     updateUserInfo(id: string, name: string, email: string, password: string, phone: string): Observable<Response> {
+        throw new Error("Method not implemented.");
+    }
     getUserInfos(): Observable<Response> {
         let result:UserInfo[]=[
             {

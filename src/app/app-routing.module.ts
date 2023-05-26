@@ -4,8 +4,17 @@ import { FirstComponentComponent } from './first-component/first-component.compo
 import { SecondComponent } from './second/second.component';
 import { ThirdComponent } from './third/third.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { UserFormComponent } from './user-form/user-form.component';
 
 const routes: Routes = [
+  {
+    path:"add",
+    component:UserFormComponent
+  },
+  {
+    path:"edit/:id",
+    component:UserFormComponent
+  },
   {
     path:"",
     component:UserListComponent

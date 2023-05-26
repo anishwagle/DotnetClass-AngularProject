@@ -1,0 +1,41 @@
+<p>user-form works!</p>
+
+<form class="example-form" [formGroup]="userForm" (ngSubmit)="handelSubmit()" style="display: flex; flex-direction: column; width: 400px;">
+    <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <input type="text" matInput formControlName="name" 
+               placeholder="Name">
+        <mat-error *ngIf="userForm.controls.name.hasError('required')">
+          Name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput formControlName="email" 
+             placeholder="Ex. pat@example.com">
+      <mat-error *ngIf="userForm.controls.email.hasError('email') && !userForm.controls.email.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="userForm.controls.email.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input type="text" matInput formControlName="password" 
+               placeholder="Password">
+        <mat-error *ngIf="userForm.controls.password.hasError('required')">
+          Password is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Phone</mat-label>
+        <input type="text" matInput formControlName="phone" 
+               placeholder="Phone">
+        <mat-error *ngIf="userForm.controls.phone.hasError('required')">
+          Phone is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <button type="submit" mat-flat-button color="primary">Submit</button>
+  </form>
+  

@@ -16,14 +16,16 @@ import { IUserInfoService } from './services/abstract/user-info.service.abstract
 import { environment } from 'src/environments/environment.development';
 import { MockUserService } from './services/mock/user-info.service.mock';
 import {MatTableModule} from '@angular/material/table'; 
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { UserFormComponent } from './user-form/user-form.component'
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponentComponent,
     SecondComponent,
     ThirdComponent,
-    UserListComponent
+    UserListComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,

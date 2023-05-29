@@ -17,7 +17,11 @@ import { environment } from 'src/environments/environment.development';
 import { MockUserService } from './services/mock/user-info.service.mock';
 import {MatTableModule} from '@angular/material/table'; 
 import {HttpClientModule} from '@angular/common/http';
-import { UserFormComponent } from './user-form/user-form.component'
+import { UserFormComponent } from './user-form/user-form.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DeleteDialogComponentComponent } from './delete-dialog-component/delete-dialog-component.component'; 
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'; 
+import {MatSnackBarModule} from '@angular/material/snack-bar'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +29,8 @@ import { UserFormComponent } from './user-form/user-form.component'
     SecondComponent,
     ThirdComponent,
     UserListComponent,
-    UserFormComponent
+    UserFormComponent,
+    DeleteDialogComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +41,10 @@ import { UserFormComponent } from './user-form/user-form.component'
     MatInputModule,
     MatButtonModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule,
+    MatProgressSpinnerModule,
+    MatSnackBarModule
   ],
   providers: [{
     provide:IUserInfoService,
